@@ -26,9 +26,25 @@ public class Data
    public static Measurable max(Measurable[] objects)
    {
       // TODO: finish this method to return the object with the largest measure.
-
-
-      return null;
+      //compares the largest measurement
+      double max = 0;
+      //save the iterator at the largest measurement
+      int iterator = -1;
+//      for(Measurable measurement: objects){
+      //uses an iterator and goes through the objects
+      for(int i =0; i<objects.length; i++){
+         //compares measurement to max
+         if(objects[i].getMeasure() > max){
+            //set the new max
+            max = objects[i].getMeasure();
+            //updates the iterator
+            iterator = i;
+         }
+      }
+      //if list isn't empty return the correct object
+       if (objects.length > 0) { return objects[iterator];}
+       //else return null
+      else { return null;}
    }
 
 }

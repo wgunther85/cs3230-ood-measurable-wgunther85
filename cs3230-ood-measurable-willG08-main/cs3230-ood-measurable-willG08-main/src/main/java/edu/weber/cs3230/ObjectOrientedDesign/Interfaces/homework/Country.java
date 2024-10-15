@@ -9,9 +9,36 @@ public class Country implements Measurable
     //  setters for the two instance variables.
 
 
+
+    // country's Name
+    private String name;
+    // total area of the country
+    private double area;
+
+    public Country(String name, double area) {
+        this.name = name;
+        this.area = area;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
     @Override
     public double getMeasure() {
-        return 0;
+        return area;
     }
 
 

@@ -11,10 +11,33 @@ public class Tree implements Measurable
    //  such as "Willow". In this class, add a constructor public Tree(String type, double height);
    //  also add getters and setters for the two instance variables.
 
+    private double height;
+    private String type;
+
+    public Tree(String type, double height){
+        this.height = height;
+        this.type = type;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public void setHeight(double height){
+        this.height = height;
+    }
+
+    public String getType(){
+        return type;
+    }
+
+    public void setType(String type){
+        this.type = type;
+    }
 
     @Override
     public double getMeasure() {
-        return 0;
+        return height;
     }
 
 
